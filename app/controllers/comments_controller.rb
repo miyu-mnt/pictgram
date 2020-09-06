@@ -16,7 +16,6 @@ class CommentsController < ApplicationController
     #   render :new
     # end
     
-    def create
       @comment = current_user.comments.new(comment_params)
       
       if @comment.save
@@ -25,7 +24,6 @@ class CommentsController < ApplicationController
         flash.now[:danger] = "投稿に失敗しました"
         render :new
       end
-    end
   end
 
   private

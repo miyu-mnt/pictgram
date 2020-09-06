@@ -16,4 +16,5 @@ Rails.application.routes.draw do
   delete '/favorites', to: 'favorites#destroy'
   
   resources :comments
+
 end

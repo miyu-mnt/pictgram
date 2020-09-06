@@ -24,10 +24,16 @@
             <%= link_to new_comment_path(topic_id: topic.id) do %>
               <%= image_tag 'icons/comment.png', class: 'topic-index-icon' %>
             <% end %>
+            <%= topic.comments.count %>
             
             <p class="topic-text">
               <%= topic.description %>
             </p>
+            
+            <p class="comment">コメント</p>
+            <% topic.comments.each do |comment| %>
+              <p class="comment-text"><%= comment.comment %></p>
+            <% end %>
           </div>
         </div>
       </div>

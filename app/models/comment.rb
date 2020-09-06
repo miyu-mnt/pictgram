@@ -4,5 +4,5 @@ class Comment < ApplicationRecord
   validates :comment, presence: true
   
   belongs_to :user
-  belongs_to :photo
+  belongs_to :topic
 end
